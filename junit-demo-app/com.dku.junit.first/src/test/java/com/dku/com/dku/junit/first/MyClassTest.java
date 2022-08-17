@@ -25,5 +25,13 @@ class MyClassTest {
 	void testMultiply() {
 		assertEquals(50, tester.multiply(10, 5), "10 x 5 must be 50");
 	}
+	
+	@Test
+	public void testGrouped() {
+		assertAll(
+				() -> assertThrows(IllegalArgumentException.class, () -> tester.multiply(1000, 5)),
+				() -> assertEquals(50, tester.multiply(10, 5), "10 x 5 must be 50")
+		);
+	}
 
 }
