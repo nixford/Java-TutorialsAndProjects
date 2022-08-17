@@ -9,28 +9,28 @@ import org.junit.jupiter.api.Test;
 
 class MyClassTest {
 	
-	private MyClass tester;
+	private MultiplyierClass tester;
 	
 	@BeforeEach
 	void setup() {
-		tester = new MyClass();
+		tester = new MultiplyierClass();
 	}
 
 	@Test
 	void testEsceptionIsThrown() {
-		assertThrows(IllegalArgumentException.class, () -> tester.multiply(1000, 5));
+		assertThrows(IllegalArgumentException.class, () -> tester.multiply(501, 5));
 	}
 	
 	@Test
 	void testMultiply() {
-		assertEquals(50, tester.multiply(10, 5), "10 x 5 must be 50");
+		assertEquals(25, tester.multiply(5, 5), "5 x 5 must be 25");
 	}
 	
 	@Test
 	public void testGrouped() {
 		assertAll(
-				() -> assertThrows(IllegalArgumentException.class, () -> tester.multiply(1000, 5)),
-				() -> assertEquals(50, tester.multiply(10, 5), "10 x 5 must be 50")
+				() -> assertThrows(IllegalArgumentException.class, () -> tester.multiply(501, 5)),
+				() -> assertEquals(25, tester.multiply(5, 5), "5 x 5 must be 25")
 		);
 	}
 
