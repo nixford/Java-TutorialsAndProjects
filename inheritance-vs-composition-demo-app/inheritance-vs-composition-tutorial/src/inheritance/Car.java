@@ -1,4 +1,4 @@
-package vehicles;
+package inheritance;
 
 public class Car extends Vehicle {
 	String licensePlateNumber;
