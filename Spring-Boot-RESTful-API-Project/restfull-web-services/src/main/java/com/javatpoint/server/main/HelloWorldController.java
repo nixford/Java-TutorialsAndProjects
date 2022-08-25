@@ -1,10 +1,13 @@
 package com.javatpoint.server.main;
 
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+@Configuration
 @RestController
 public class HelloWorldController {
 
@@ -19,5 +22,10 @@ public class HelloWorldController {
 		@GetMapping(path="/hello-world-bean")
 		public HelloWorldBean helloWorldBean() {
 			return new HelloWorldBean("Hello World Bean!");
+		}
+		
+		@GetMapping(path="/path/{name}")
+		public HelloWorldBean pathVariable(@PathVariable String name) {
+			return new HelloWorldBean(String.format("Hellow World Path, %s", name));
 		}
 }
