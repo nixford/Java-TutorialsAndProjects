@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloWorldController {
 
 		// using get method and hello-world as URI
+		// It can be used also @GetMapping - in this case method specification is not required (only path)
 		@RequestMapping(method=RequestMethod.GET, path="/hello-world")
 		public String helloWorld() {
 			return "Hello world!";
