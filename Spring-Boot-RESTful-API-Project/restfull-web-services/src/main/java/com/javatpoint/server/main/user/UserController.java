@@ -2,6 +2,7 @@ package com.javatpoint.server.main.user;
 
 import java.util.List;
 import java.net.URI;
+import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -34,20 +35,19 @@ public class UserController {
 	}
 
 	@PostMapping("/users")
-	public ResponseEntity<Object> createUser(@RequestBody User user) {
-		User savedUser = service.save(user);
-		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(savedUser.getId())
+	public ResponseEntity<Object> createUser(@Valid @RequestBody User user) {
+		User sevedUser = service.save(user);
+		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(sevedUser.getId())
 				.toUri();
 		return ResponseEntity.created(location).build();
 	}
-	
+
 	@DeleteMapping("/users/{id}")
 	public void deleteUser(@PathVariable int id) {
 		User user = service.deleteById(id);
-		if(user==null) {
+		if (user == null) {
 			throw new UserNotFoundException("id: " + id);
 		}
 	}
-	
 
 }
