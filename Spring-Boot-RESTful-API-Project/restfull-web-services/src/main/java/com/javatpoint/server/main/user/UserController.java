@@ -24,13 +24,19 @@ public class UserController {
 
 	@GetMapping("/users/{id}")
 	public User retrieveUser(@PathVariable int id) {
-		return service.findOne(id);
+		User user = service.findOne(id);
+		if (user == null) {
+			String missingId = String.valueOf(id);
+			throw new UserNotFoundException("id: " + missingId);
+		}
+		return user;
 	}
 
 	@PostMapping("/users")
-	public ResponseEntity<Object> createUser(@RequestBody User user) {		
-		User savedUser = service.save(user);		
-		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(savedUser.getId()).toUri();
+	public ResponseEntity<Object> createUser(@RequestBody User user) {
+		User savedUser = service.save(user);
+		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(savedUser.getId())
+				.toUri();
 		return ResponseEntity.created(location).build();
 	}
 
