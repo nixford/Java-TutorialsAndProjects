@@ -1,6 +1,6 @@
 package com.spring.demo;
 
-public class MyApp {
+public class MyAppHardCoded {
 
 	public static void main(String[] args) {
 		
