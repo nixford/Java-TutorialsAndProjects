@@ -14,13 +14,13 @@
 	</bean>
 
 	<bean id="myTrackCoach" class="com.spring.beans.TrackCoach">
-		<!-- set up constructor injection -->
+		<!-- set up CONSTRUCTOR injection -->
 		<constructor-arg ref="myFortune" />
 	</bean>
 	
 	<bean id="myCricketCoach" class="com.spring.beans.CricketCoach">
-		<!-- set up constructor injection -->
-		<constructor-arg ref="myFortune" />
+		<!-- set up SETTER injection -->
+		<property name="fortuneService" ref="myFortune"/>
 	</bean>
 </beans>
 

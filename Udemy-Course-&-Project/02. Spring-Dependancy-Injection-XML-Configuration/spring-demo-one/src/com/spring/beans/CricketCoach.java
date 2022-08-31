@@ -9,12 +9,13 @@ public class CricketCoach implements Coach {
 	// define a private field for the dependency
 	private Fortune fortuneService;
 	
-	public CricketCoach(Fortune theFortuneService) {
+	public CricketCoach() {
 		System.out.println("CricketCoach constructor");
 	}
 
 	// EXAMPLE FOR DEPENDENCY INJECTION WITH SETTER
 	public void setFortuneService(Fortune fortuneService) {
+		System.out.println("CricketCoach setter");
 		this.fortuneService = fortuneService;
 	}
 
