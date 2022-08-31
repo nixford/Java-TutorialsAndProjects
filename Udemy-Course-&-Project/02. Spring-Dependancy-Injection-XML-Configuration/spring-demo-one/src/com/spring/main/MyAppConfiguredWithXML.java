@@ -7,6 +7,10 @@ import com.spring.interfaces.Coach;
 public class MyAppConfiguredWithXML {
 
 	public static void main(String[] args) {
+		
+		// EXAMPLE FOR SPRING CONTAINER with primary functions:
+		//		1) Create and manage objects (Inversion of Control)	
+		//		2) Inject object's dependencies (Dependency Injection)
 
 		// create spring container
 		// load the spring configuration file

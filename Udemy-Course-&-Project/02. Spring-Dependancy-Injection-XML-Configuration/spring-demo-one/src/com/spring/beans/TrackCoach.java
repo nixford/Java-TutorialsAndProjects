@@ -10,10 +10,14 @@ public class TrackCoach implements Coach {
 	// define a private field for the dependency
 	private Fortune fortuneService;
 
+	// define a default empty constructor in order the object to be instantiated in MyAppHardCoded.java
+	public TrackCoach() {
+	}
+
 	// define a constructor for dependency injection
 	public TrackCoach(Fortune theFortuneService) {
-			fortuneService = theFortuneService;
-		}
+		fortuneService = theFortuneService;
+	}
 
 	@Override
 	public String getDailyWorkout() {
