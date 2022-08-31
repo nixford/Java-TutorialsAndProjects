@@ -1,4 +1,6 @@
-package com.spring.demo;
+package com.spring.demo.beans;
+
+import com.spring.demo.interfaces.Coach;
 
 public class TrackCoach implements Coach {
 

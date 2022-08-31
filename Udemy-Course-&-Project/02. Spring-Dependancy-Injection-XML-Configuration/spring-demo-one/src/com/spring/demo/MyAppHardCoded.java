@@ -1,5 +1,8 @@
 package com.spring.demo;
 
+import com.spring.demo.beans.TrackCoach;
+import com.spring.demo.interfaces.Coach;
+
 public class MyAppHardCoded {
 
 	public static void main(String[] args) {
