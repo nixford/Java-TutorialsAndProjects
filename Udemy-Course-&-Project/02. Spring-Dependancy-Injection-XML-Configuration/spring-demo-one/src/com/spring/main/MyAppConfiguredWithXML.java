@@ -8,7 +8,7 @@ public class MyAppConfiguredWithXML {
 
 	public static void main(String[] args) {
 		
-		// EXAMPLE FOR SPRING CONTAINER with primary functions:
+		// EXAMPLE FOR IoC and DI with XML Configuration of SPRING CONTAINER and with primary functions:
 		//		1) Create and manage objects (Inversion of Control)	
 		//		2) Inject object's dependencies (Dependency Injection)
 
@@ -17,7 +17,7 @@ public class MyAppConfiguredWithXML {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
 		// retrieve bean from spring container
-		Coach theCoach = context.getBean("myTrackCoach", Coach.class);
+		Coach theCoach = context.getBean("myCricketCoach", Coach.class);
 
 		// call methods on the bean
 		System.out.println(theCoach.getDailyWorkout());

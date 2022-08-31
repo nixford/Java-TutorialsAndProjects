@@ -17,5 +17,10 @@
 		<!-- set up constructor injection -->
 		<constructor-arg ref="myFortune" />
 	</bean>
+	
+	<bean id="myCricketCoach" class="com.spring.beans.CricketCoach">
+		<!-- set up constructor injection -->
+		<constructor-arg ref="myFortune" />
+	</bean>
 </beans>
 

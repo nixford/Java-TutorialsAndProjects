@@ -10,6 +10,7 @@ public class BaseballCoach implements Coach {
 	// define a private field for the dependency
 	private Fortune fortuneService;
 	
+	// EXAMPLE FOR CONSTRUCTOR INJECTION
 	// define a constructor for dependency injection
 	public BaseballCoach(Fortune theFortuneService) {
 		fortuneService = theFortuneService;

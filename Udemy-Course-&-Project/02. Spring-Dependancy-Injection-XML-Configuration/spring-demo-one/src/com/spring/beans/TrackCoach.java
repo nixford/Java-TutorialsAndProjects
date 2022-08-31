@@ -14,6 +14,7 @@ public class TrackCoach implements Coach {
 	public TrackCoach() {
 	}
 
+	// EXAMPLE FOR CONSTRUCTOR INJECTION
 	// define a constructor for dependency injection
 	public TrackCoach(Fortune theFortuneService) {
 		fortuneService = theFortuneService;
