@@ -13,6 +13,7 @@ public class BaseballCoach implements Coach {
 	// EXAMPLE FOR CONSTRUCTOR INJECTION
 	// define a constructor for dependency injection
 	public BaseballCoach(Fortune theFortuneService) {
+		System.out.println("BaseballCoach constructor");
 		fortuneService = theFortuneService;
 	}
 	

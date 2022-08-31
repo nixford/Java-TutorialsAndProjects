@@ -17,6 +17,7 @@ public class TrackCoach implements Coach {
 	// EXAMPLE FOR CONSTRUCTOR INJECTION
 	// define a constructor for dependency injection
 	public TrackCoach(Fortune theFortuneService) {
+		System.out.println("TrackCoach constructor");
 		fortuneService = theFortuneService;
 	}
 
