@@ -31,4 +31,15 @@ public class TrackCoach implements Coach {
 		// use my fortuneService to get a fortune
 		return fortuneService.getFortune(className);
 	}
+	
+	// LIFECYCLE HOOK - add an init method
+	public void doMyStartupStuff() {
+		System.out.println("TrackCoach: START - doMyStartupStuff");
+	}	
+	
+	// LIFECYCLE HOOK - add a destroy method
+	public void doMyCleanuptuff() {
+		System.out.println("TrackCoach: END - doMyCleanuptuff");
+	}
+	
 }
