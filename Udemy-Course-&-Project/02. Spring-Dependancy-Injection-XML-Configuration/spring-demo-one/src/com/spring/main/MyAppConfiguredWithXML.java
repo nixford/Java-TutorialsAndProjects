@@ -8,7 +8,7 @@ public class MyAppConfiguredWithXML {
 
 	public static void main(String[] args) {
 		
-		// EXAMPLE FOR IoC and DI with XML Configuration of SPRING CONTAINER and with primary functions:
+		// EXAMPLE FOR IoC and CONSTRUCTOR DI with XML Configuration of SPRING CONTAINER and with primary functions:
 		//		1) Create and manage objects (Inversion of Control)	
 		//		2) Inject object's dependencies (Dependency Injection)
 
