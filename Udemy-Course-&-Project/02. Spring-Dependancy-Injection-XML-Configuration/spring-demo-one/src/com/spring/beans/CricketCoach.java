@@ -5,6 +5,9 @@ import com.spring.interfaces.Fortune;
 
 public class CricketCoach implements Coach {
 	
+	private String emailAddress;
+	private String team;
+
 	private String className = getClass().getName();
 	// define a private field for the dependency
 	private Fortune fortuneService;
@@ -28,6 +31,22 @@ public class CricketCoach implements Coach {
 	@Override
 	public String getFortune() {
 		return fortuneService.getFortune(className);
+	}
+	
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
+	}
+
+	public String getTeam() {
+		return team;
+	}
+
+	public void setTeam(String team) {
+		this.team = team;
 	}
 
 }

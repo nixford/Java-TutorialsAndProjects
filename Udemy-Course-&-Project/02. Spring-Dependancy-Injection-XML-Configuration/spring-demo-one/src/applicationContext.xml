@@ -21,6 +21,10 @@
 	<bean id="myCricketCoach" class="com.spring.beans.CricketCoach">
 		<!-- set up SETTER injection -->
 		<property name="fortuneService" ref="myFortune"/>
+		
+		<!-- inject literal values -->
+		<property name="emailAddress" value="dku2@java.com"/>
+		<property name="team" value="javaTeam"/>
 	</bean>
 </beans>
 
