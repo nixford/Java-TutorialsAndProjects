@@ -1,9 +1,11 @@
-package com.spring.demo.beans;
+package com.spring.beans;
 
-import com.spring.demo.interfaces.Coach;
-import com.spring.demo.interfaces.Fortune;
+import com.spring.interfaces.Coach;
+import com.spring.interfaces.Fortune;
 
 public class BaseballCoach implements Coach {
+	
+	private String className = getClass().getName();
 	
 	// define a private field for the dependency
 	private Fortune fortuneService;
@@ -21,6 +23,6 @@ public class BaseballCoach implements Coach {
 	@Override
 	public String getFortune() {		
 		// use my fortuneService to get a fortune		
-		return fortuneService.getFortune();
+		return fortuneService.getFortune(className);
 	}
 }
