@@ -18,7 +18,7 @@ public class TennisCoach implements Coach {
 
 	// I. EXAMPLE FOR FIELD INJECTION
 	@Autowired
-	@Qualifier("happyFortuneService")
+	@Qualifier("happyFortuneService") // it is used 
 	private FortuneService fortuneService;
 
 	// define default constructor
