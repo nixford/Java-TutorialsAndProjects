@@ -14,21 +14,36 @@ import com.spring.interfaces.FortuneService;
 
 @Component
 public class TennisCoach implements Coach {
-	
+
 	private FortuneService fortuneService;
-	
-	@Autowired
-	public TennisCoach(FortuneService theFortuneService) {
-		fortuneService = theFortuneService;
+
+	// Dependency injection with @Autowired in CONSTRUCTOR
+	/*
+	 * @Autowired public TennisCoach(FortuneService theFortuneService) {
+	 * fortuneService = theFortuneService; }
+	 */
+
+	// Dependency injection with @Autowired in SETTER
+	// define default constructor
+	public TennisCoach() {
+		System.out.println("TennisCoach - constructor");
 	}
 	
+	// define a setter method
+	@Autowired
+	public void setFortuneService(FortuneService theFortuneService) {
+		System.out.println("TennisCoach - setFortuneService");
+		fortuneService = theFortuneService;
+	}
+		
+
 	@Override
 	public String getDailyWorkout() {
 		return "TennisCoach - getDailyWorkout";
 	}
 
 	@Override
-	public String getDailyFortune() {		
+	public String getDailyFortune() {
 		return "TennisCoach - getDailyFortune() - " + fortuneService.getFortune();
 	}
 }
