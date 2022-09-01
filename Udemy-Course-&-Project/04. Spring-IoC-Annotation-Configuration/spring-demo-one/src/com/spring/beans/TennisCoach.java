@@ -15,12 +15,12 @@ import com.spring.interfaces.FortuneService;
 @Component
 public class TennisCoach implements Coach {
 	
-	// private FortuneService fortuneService;
+	private FortuneService fortuneService;
 	
-//	@Autowired
-//	public TennisCoach(FortuneService theFortuneService) {
-//		fortuneService = theFortuneService;
-//	}
+	@Autowired
+	public TennisCoach(FortuneService theFortuneService) {
+		fortuneService = theFortuneService;
+	}
 	
 	@Override
 	public String getDailyWorkout() {
@@ -29,6 +29,6 @@ public class TennisCoach implements Coach {
 
 	@Override
 	public String getDailyFortune() {		
-		return "TennisCoach - getDailyFortune()";
+		return "TennisCoach - getDailyFortune() - " + fortuneService.getFortune();
 	}
 }
