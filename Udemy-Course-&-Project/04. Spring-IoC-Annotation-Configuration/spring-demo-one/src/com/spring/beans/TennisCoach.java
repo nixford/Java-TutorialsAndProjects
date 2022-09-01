@@ -15,27 +15,27 @@ import com.spring.interfaces.FortuneService;
 @Component
 public class TennisCoach implements Coach {
 
+	// I. EXAMPLE FOR FIELD INJECTION
+	@Autowired
 	private FortuneService fortuneService;
 
-	// Dependency injection with @Autowired in CONSTRUCTOR
+	// define default constructor
+	public TennisCoach() {
+		System.out.println("TennisCoach - constructor");
+	}
+
+	// II. Dependency injection with @Autowired in CONSTRUCTOR
 	/*
 	 * @Autowired public TennisCoach(FortuneService theFortuneService) {
 	 * fortuneService = theFortuneService; }
 	 */
 
-	// Dependency injection with @Autowired in SETTER
-	// define default constructor
-	public TennisCoach() {
-		System.out.println("TennisCoach - constructor");
-	}
-	
-	// define a setter method
-	@Autowired
-	public void setFortuneService(FortuneService theFortuneService) {
-		System.out.println("TennisCoach - setFortuneService");
-		fortuneService = theFortuneService;
-	}
-		
+	// III. Dependency injection with @Autowired in SETTER
+	// @Autowired
+	// public void setFortuneService(FortuneService theFortuneService) {
+	// System.out.println("TennisCoach - setFortuneService");
+	// fortuneService = theFortuneService;
+	// }
 
 	@Override
 	public String getDailyWorkout() {
