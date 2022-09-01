@@ -16,7 +16,6 @@ public class AnnotationDemoApp {
 		// If @Component - getBean("... class name with lower case first letter", Coach.class
 		Coach theCoach = context.getBean("tennisCoach", Coach.class);		
 		
-		
 		System.out.println(theCoach.getDailyWorkout());
 		System.out.println(theCoach.getDailyFortune());
 		
