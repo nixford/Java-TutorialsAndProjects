@@ -10,5 +10,10 @@
 	<form action="processFormVersionTwo" method="GET">
 		<input type="text" name="studentName" placeholder="Example for data transferring with MODEL?" />		
 		<input type="submit" />
-	</form>			
+	</form>	
+	<br><br>
+	<form action="processFormVersionThree" method="GET">
+		<input type="text" name="studentName" placeholder="Example for data transferring with MODEL?" />		
+		<input type="submit" />
+	</form>				
 </body>
