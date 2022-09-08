@@ -13,8 +13,6 @@ local.properties
 .settings/
 .loadpath
 .recommenders
-spring-mvc-demo/WebContent/WEB-INF/lib/
-*.jar
 
 # External tool builders
 .externalToolBuilders/
