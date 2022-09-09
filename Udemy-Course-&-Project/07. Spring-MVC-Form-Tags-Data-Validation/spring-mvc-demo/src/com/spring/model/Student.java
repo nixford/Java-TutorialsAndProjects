@@ -1,4 +1,4 @@
-package com.luv2code.springdemo.mvc;
+package com.spring.model;
 
 public class Student {
 
